@@ -13,6 +13,10 @@ class AdminController < ApplicationController
         @users = User.all
     end 
 
+    def buyer
+        
+    end
+
     def create_categories
         @categories = Category.all
     end

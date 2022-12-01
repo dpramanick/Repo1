@@ -57,6 +57,8 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "byebug"
+  gem 'rspec-rails', ">= 3.9.0"
+  gem 'factory_girl_rails', "~> 4.4.1"
 end
 
 group :development do
@@ -100,8 +102,8 @@ gem "omniauth-rails_csrf_protection", "~>1.0"
 # Download images for Seed file
 gem 'down'
 
-gem 'rubocop'
-gem 'rubocop-rails'
+#gem 'rubocop'
+#gem 'rubocop-rails'
 
 # Used to manually hit AusPost API w/ GET request
 #gem 'http'

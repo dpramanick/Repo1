@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :products, dependent: :destroy
   has_many :payments
+  has_many :reviews
 
   scope :all_except, ->(user) { where.not(id: user) }
   after_create_commit { broadcast_append_to "users" }

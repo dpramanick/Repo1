@@ -32,6 +32,12 @@ class ProductsController < ApplicationController
     end
   
     def show
+      if @product.reviews.blank?
+        @average_review = 0
+      else
+        @average_review = @product.reviews.average(:rating).round(2) 
+      end
+
       @user = @product.user   
       if user_signed_in? && current_user != @product.user
         response = auspost_api_get

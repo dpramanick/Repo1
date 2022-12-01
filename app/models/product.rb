@@ -4,7 +4,7 @@ class Product < ApplicationRecord
     belongs_to :condition
     belongs_to :category
     has_one_attached :picture
-    
+    has_many :reviews  
 
    
     scope :search, ->(search) { where('name like ?', "%#{search}%") }
